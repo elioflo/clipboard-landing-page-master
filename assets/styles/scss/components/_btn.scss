@@ -1,0 +1,22 @@
+@import '../abstract/utility';
+.btn {
+  background-color: var(--bg-color, transparent);
+  border-radius: 2rem;
+  box-shadow: 0 .25rem .25rem var(--box-shadow,transparent);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  font-weight: 600;
+  @extend %common-width;
+  display: block;
+  margin-top: 1.5rem;
+
+  &--green {
+    --bg-color: var(--primary-strong-cyan);
+    --box-shadow: var(--primary-strong-cyan-shadow);
+  }
+  &--blue {
+    --bg-color: var(--primary-light-blue);
+    --box-shadow: var(--primary-light-blue-shadow);
+  }
+}

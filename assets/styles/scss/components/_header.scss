@@ -1,0 +1,19 @@
+@import '../abstract/utility';
+
+.header {
+  text-align: center;
+  padding-top: 8rem;
+  background: url('../../images/bg-header-mobile.png') no-repeat;
+
+  &__title {
+    @extend %common-width;
+    color: var(--neutral-dark-grayish-blue);
+    line-height: 1.25;
+    margin-top: 3.5rem;
+  } 
+  
+  &__text {
+    @extend %common-width;
+    line-height: 1.5;
+  }
+}

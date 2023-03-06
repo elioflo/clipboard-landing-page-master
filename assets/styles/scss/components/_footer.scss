@@ -1,0 +1,22 @@
+.footer {
+  margin-top: 10rem;
+  text-align: center;
+  background-color: hsl(201, 11%, 97%);
+  padding-bottom: 2.5rem;
+  &__img {
+    width: 3.5rem;
+    margin-top: 2.5rem;
+  }
+
+  &__link {
+    display: block;
+    color: var(--neutral-dark-grayish-blue);
+    margin: 2.5rem 0;
+  }
+
+  &__socials {
+    a {
+      margin: 0 1rem;
+    }
+  }
+}

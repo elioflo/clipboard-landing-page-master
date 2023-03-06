@@ -1,4 +1,9 @@
 @use 'abstract/variables';
+@use 'base/normalize';
 @use 'base/typography';
-@use 'base/reset';
-@use 'components/main'
+@use 'components/container';
+@use 'components/header';
+@use 'components/btn';
+@use 'components/section';
+@use 'components/sponsor';
+@use 'components/footer';

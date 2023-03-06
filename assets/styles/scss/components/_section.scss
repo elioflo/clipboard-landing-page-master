@@ -1,0 +1,21 @@
+@import '../abstract/utility';
+
+.section {
+  margin-top: 4rem;
+  text-align: center;
+
+  &__img {
+    @extend %common-width;
+    display: block
+  }
+  &__title {
+    @extend %common-width;
+    color: var(--neutral-dark-grayish-blue);
+    font-size: 1.5rem;
+  }
+  &__text {
+    @extend %common-width;
+    line-height: 1.75rem;
+    margin-bottom: 3rem;
+  }
+}

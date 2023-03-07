@@ -328,12 +328,14 @@ template {
   width: calc(100% - 4rem);
   margin-left: auto;
   margin-right: auto;
+  max-width: 30rem;
 }
 
 .header {
   text-align: center;
   padding-top: 8rem;
   background: url("../../images/bg-header-mobile.png") no-repeat;
+  background-size: 100% auto;
 }
 .header__title {
   color: var(--neutral-dark-grayish-blue);
@@ -348,6 +350,7 @@ template {
   width: calc(100% - 4rem);
   margin-left: auto;
   margin-right: auto;
+  max-width: 30rem;
 }
 
 .btn {
@@ -358,6 +361,7 @@ template {
   padding-bottom: 1rem;
   color: white;
   font-weight: 600;
+  max-width: 19.5rem;
   display: block;
   margin-top: 1.5rem;
 }
@@ -374,6 +378,7 @@ template {
   width: calc(100% - 4rem);
   margin-left: auto;
   margin-right: auto;
+  max-width: 30rem;
 }
 
 .section {

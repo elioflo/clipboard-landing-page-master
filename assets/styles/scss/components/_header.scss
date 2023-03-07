@@ -4,6 +4,7 @@
   text-align: center;
   padding-top: 8rem;
   background: url('../../images/bg-header-mobile.png') no-repeat;
+  background-size: 100% auto;
 
   &__title {
     @extend %common-width;

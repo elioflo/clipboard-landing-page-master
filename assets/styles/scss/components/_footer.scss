@@ -1,10 +1,13 @@
+@import '../abstract/media-queries';
+
 .footer {
   margin-top: 10rem;
   text-align: center;
   background-color: hsl(201, 11%, 97%);
   padding-bottom: 2.5rem;
   &__img {
-    width: 3.5rem;
+    height: 4rem;
+    object-fit: contain;
     margin-top: 2.5rem;
   }
 
@@ -12,11 +15,48 @@
     display: block;
     color: var(--neutral-dark-grayish-blue);
     margin: 2.5rem 0;
+    text-decoration: none;
   }
 
   &__socials {
     a {
       margin: 0 1rem;
+    }
+  }
+
+  @include media-query($sm-screen){
+    &__link {
+      margin: 0 1rem;
+    }
+    &__links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(10rem, 1fr));
+      justify-items: start;
+      align-content: center;
+      max-width: 31rem;
+      gap: .5rem;
+      margin: 2.5rem auto;
+    }
+  }
+  
+  @include media-query($md-screen){
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15vw;
+    padding-bottom: 3rem;
+    font-size: 1.1rem;
+
+    &__img, &__links, &__socials {
+      height: 4rem;
+      margin: 0;
+      margin-top: 3rem;
+    }
+
+    &__socials {
+      display: flex;
+      align-items: center;
     }
   }
 }

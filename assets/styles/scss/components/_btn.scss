@@ -1,4 +1,6 @@
 @import '../abstract/utility';
+@import '../abstract/media-queries';
+
 .btn {
   @extend %common-width;
   background-color: var(--bg-color, transparent);
@@ -19,5 +21,12 @@
   &--blue {
     --bg-color: var(--primary-light-blue);
     --box-shadow: var(--primary-light-blue-shadow);
+  }
+
+  @include media-query($md-screen){
+    margin-left: 0;
+    margin-right: 0;
+    width: fit-content;
+    padding: 1rem 2.25rem;
   }
 }

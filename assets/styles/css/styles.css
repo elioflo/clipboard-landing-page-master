@@ -319,6 +319,32 @@ template {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .flex {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-moved {
+    margin-left: auto;
+    margin-right: 0;
+    width: 50%;
+  }
+}
+
 .container {
   font-family: "Bai Jamjuree", sans-serif;
   color: var(--neutral-grayish-blue);
@@ -329,6 +355,11 @@ template {
   margin-left: auto;
   margin-right: auto;
   max-width: 30rem;
+}
+@media (min-width: 768px) {
+  .header__text, .header__title {
+    max-width: 42rem;
+  }
 }
 
 .header {
@@ -345,12 +376,29 @@ template {
 .header__text {
   line-height: 1.5;
 }
+@media (min-width: 768px) {
+  .header {
+    background: url("../../images/bg-header-desktop.png") no-repeat;
+    background-size: 100% auto;
+  }
+  .header__title {
+    font-size: 2.7rem;
+  }
+  .header__text {
+    font-size: 1.22rem;
+  }
+}
 
 .btn {
   width: calc(100% - 4rem);
   margin-left: auto;
   margin-right: auto;
   max-width: 30rem;
+}
+@media (min-width: 768px) {
+  .btn {
+    max-width: 42rem;
+  }
 }
 
 .btn {
@@ -373,12 +421,25 @@ template {
   --bg-color: var(--primary-light-blue);
   --box-shadow: var(--primary-light-blue-shadow);
 }
+@media (min-width: 768px) {
+  .btn {
+    margin-left: 0;
+    margin-right: 0;
+    width: fit-content;
+    padding: 1rem 2.25rem;
+  }
+}
 
 .section__text, .section__title, .section__img {
   width: calc(100% - 4rem);
   margin-left: auto;
   margin-right: auto;
   max-width: 30rem;
+}
+@media (min-width: 768px) {
+  .section__text, .section__title, .section__img {
+    max-width: 42rem;
+  }
 }
 
 .section {
@@ -387,6 +448,7 @@ template {
 }
 .section__img {
   display: block;
+  object-fit: contain;
 }
 .section__title {
   color: var(--neutral-dark-grayish-blue);
@@ -396,10 +458,67 @@ template {
   line-height: 1.75rem;
   margin-bottom: 3rem;
 }
+@media (min-width: 768px) {
+  .section {
+    margin-top: 7.5rem;
+  }
+  .section__img--bigger {
+    max-width: 68rem;
+  }
+  .section__img--moved {
+    --percentage: 3%;
+    position: relative;
+    width: calc(50% + var(--percentage));
+    left: calc(0% - var(--percentage));
+    max-width: unset;
+  }
+  .section__title {
+    font-size: 2rem;
+  }
+  .section__title--not-center {
+    margin: 0;
+    margin-left: 3vw;
+    padding-top: 4vw;
+    text-align: left;
+  }
+  .section__title--smaller {
+    font-size: 1.5rem;
+  }
+  .section__text {
+    font-size: 1.1rem;
+  }
+  .section__text--not-center {
+    margin: 0;
+    margin-top: 1rem;
+    margin-left: 3vw;
+    margin-right: auto;
+    text-align: left;
+    max-width: 22rem;
+  }
+  .section__text--smaller {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    max-width: 28rem;
+  }
+  .card img {
+    object-fit: contain;
+    height: 2.25rem;
+  }
+}
 
 .sponsor {
   display: block;
   margin: 4rem auto;
+  object-fit: contain;
+}
+@media (min-width: 768px) {
+  .sponsor {
+    margin: 4rem 1rem;
+  }
 }
 
 .footer {
@@ -409,16 +528,52 @@ template {
   padding-bottom: 2.5rem;
 }
 .footer__img {
-  width: 3.5rem;
+  height: 4rem;
+  object-fit: contain;
   margin-top: 2.5rem;
 }
 .footer__link {
   display: block;
   color: var(--neutral-dark-grayish-blue);
   margin: 2.5rem 0;
+  text-decoration: none;
 }
 .footer__socials a {
   margin: 0 1rem;
+}
+@media (min-width: 640px) {
+  .footer__link {
+    margin: 0 1rem;
+  }
+  .footer__links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    justify-items: start;
+    align-content: center;
+    max-width: 31rem;
+    gap: 0.5rem;
+    margin: 2.5rem auto;
+  }
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15vw;
+    padding-bottom: 3rem;
+    font-size: 1.1rem;
+  }
+  .footer__img, .footer__links, .footer__socials {
+    height: 4rem;
+    margin: 0;
+    margin-top: 3rem;
+  }
+  .footer__socials {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

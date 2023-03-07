@@ -1,0 +1,9 @@
+@import 'media-queries';
+
+.text-moved {
+  @include media-query($md-screen){
+     margin-left: auto;
+     margin-right: 0;
+     width: 50%;
+  }
+}

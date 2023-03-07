@@ -1,0 +1,12 @@
+@import '../abstract/media-queries';
+
+.card {
+  @include media-query($md-screen){
+    max-width: 28rem;
+
+    img {
+      object-fit: contain;
+      height: 2.25rem;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @import '../abstract/utility';
+@import '../abstract/media-queries';
 
 .section {
   margin-top: 4rem;
@@ -6,7 +7,8 @@
 
   &__img {
     @extend %common-width;
-    display: block
+    display: block;
+    object-fit: contain;
   }
   &__title {
     @extend %common-width;
@@ -18,4 +20,49 @@
     line-height: 1.75rem;
     margin-bottom: 3rem;
   }
+
+  @include media-query($md-screen){
+    margin-top: 7.5rem;
+
+    &__img {
+      &--bigger {
+        max-width: 68rem;
+      }
+      &--moved {
+        --percentage: 3%;
+        position: relative;
+        width: calc(50% + var(--percentage));
+        left: calc(0% - var(--percentage));
+        max-width: unset;
+      }
+    }
+    &__title {
+      font-size: 2rem;
+      &--not-center {
+        margin: 0;
+        margin-left: 3vw;
+        padding-top: 4vw;
+        text-align: left;
+      }
+
+      &--smaller {
+        font-size: 1.5rem;
+      }
+    }
+    &__text {
+      font-size: 1.1rem;
+      &--not-center {
+        margin: 0;
+        margin-top: 1rem;
+        margin-left: 3vw;
+        margin-right: auto;
+        text-align: left;
+        max-width: 22rem;
+      }
+      &--smaller {
+        font-size: 1rem;
+      }
+    }
+  }
+
 }

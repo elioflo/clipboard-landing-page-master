@@ -1,11 +1,12 @@
 @import '../abstract/utility';
+@import '../abstract/media-queries';
 
 .header {
   text-align: center;
   padding-top: 8rem;
   background: url('../../images/bg-header-mobile.png') no-repeat;
   background-size: 100% auto;
-
+  
   &__title {
     @extend %common-width;
     color: var(--neutral-dark-grayish-blue);
@@ -16,5 +17,18 @@
   &__text {
     @extend %common-width;
     line-height: 1.5;
+  }
+  
+  @include media-query($md-screen){
+    background: url('../../images/bg-header-desktop.png') no-repeat;
+    background-size: 100% auto;
+    &__title {
+      font-size: 2.7rem;
+    } 
+    
+    &__text {
+      font-size: 1.22rem;
+    }
+    
   }
 }

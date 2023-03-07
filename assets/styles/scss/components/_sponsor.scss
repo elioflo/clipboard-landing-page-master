@@ -1,4 +1,10 @@
+@import '../abstract/media-queries';
 .sponsor {
   display: block;
   margin: 4rem auto;
+  object-fit: contain;
+  
+  @include media-query($md-screen){
+    margin: 4rem 1rem;
+  }
 }

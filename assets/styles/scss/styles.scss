@@ -1,9 +1,13 @@
 @use 'abstract/variables';
 @use 'base/normalize';
 @use 'base/typography';
+@use 'abstract/flex-center';
+@use 'abstract/flex';
+@use 'abstract/text-moved';
 @use 'components/container';
 @use 'components/header';
 @use 'components/btn';
 @use 'components/section';
+@use 'components/card';
 @use 'components/sponsor';
 @use 'components/footer';

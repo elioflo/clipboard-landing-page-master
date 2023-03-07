@@ -1,0 +1,11 @@
+@import 'media-queries';
+
+.flex-center {
+  @include media-query($md-screen){
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 2rem;
+  }
+}

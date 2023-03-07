@@ -1,0 +1,9 @@
+@import 'media-queries';
+
+.flex {
+  @include media-query($md-screen){
+     display: flex;
+     justify-content: center;
+     position: relative;
+  }
+}

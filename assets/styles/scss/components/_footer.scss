@@ -1,6 +1,7 @@
 @import '../abstract/media-queries';
 
 .footer {
+  position: relative;
   margin-top: 10rem;
   text-align: center;
   background-color: hsl(201, 11%, 97%);

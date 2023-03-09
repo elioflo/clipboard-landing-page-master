@@ -526,6 +526,7 @@ template {
 }
 
 .footer {
+  position: relative;
   margin-top: 10rem;
   text-align: center;
   background-color: hsl(201deg, 11%, 97%);
@@ -596,6 +597,10 @@ template {
   text-align: center;
   background-color: hsl(201deg, 11%, 97%);
   color: var(--neutral-dark-grayish-blue);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   margin: 0;
   padding: 1rem;
 }

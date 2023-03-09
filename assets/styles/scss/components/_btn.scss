@@ -28,5 +28,10 @@
     margin-right: 0;
     width: fit-content;
     padding: 1rem 2.25rem;
+    transition: opacity .5s;
+
+    &:hover {
+      opacity: .7;
+    }
   }
 }
